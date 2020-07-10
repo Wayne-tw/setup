@@ -14,6 +14,10 @@ jobs:
         id: checkout
         uses: actions/checkout@v2
 
+      - name: Linter
+        id: liner
+        run: ./scripts/code_liner.sh
+
       - name: Install And Test
         id: install-and-test
         run: ./scripts/install_and_test.sh
