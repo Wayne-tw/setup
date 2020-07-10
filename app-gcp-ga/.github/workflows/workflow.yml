@@ -16,7 +16,7 @@ jobs:
 
       - name: Linter
         id: liner
-        run: ./scripts/code_liner.sh
+        run: ./scripts/code_linter.sh
 
       - name: Install And Test
         id: install-and-test
