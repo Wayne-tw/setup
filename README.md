@@ -15,5 +15,5 @@ Scripts to:
 To add to your repo run the following script
 
 ```sh
-wget https://github.com/worthington10TW/setup/tree/master/app-gcp-ga
+svn export https://github.com/worthington10TW/setup/trunk/app-gcp-ga move_my_contents_to_your_project_root
 ```
