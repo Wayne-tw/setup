@@ -12,6 +12,7 @@ This folder will setup build pipeline and deployment. It is designed to be as ge
 - [Code linter script](code_linter.sh) to be populated.
 - [Install and test script](install_and_test.sh) to be populated.
 - [Build script](build.sh) to be populated.
+- [Install talisman](https://github.com/thoughtworks/talisman)
 - Set GCP_SA_KEY secret. See 'GitHub action secret' for more info.
 
 ## GCP
@@ -83,6 +84,18 @@ Terraform will
   - Container registry.
 - Create app engine application.
 - Set outputs to be used when deploying and testing application
+
+## Talisman
+
+Talisman is a tool that installs a hook to your repository to ensure that potential secrets or sensitive information do not leave the developer's workstation.
+
+It validates the outgoing changeset for things that look suspicious - such as potential SSH keys, authorization tokens, private keys etc.
+
+Run the following command on your terminal, to download and install the binary at \$HOME/.talisman/bin
+
+```sh
+curl --silent  https://raw.githubusercontent.com/thoughtworks/talisman/master/global_install_scripts/install.bash > /tmp/install_talisman.bash && /bin/bash /tmp/install_talisman.bash
+```
 
 ## Pre commit hooks
 
