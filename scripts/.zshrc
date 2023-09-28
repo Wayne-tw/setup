@@ -46,7 +46,6 @@ alias dev='cd /Users/matthew/Documents/dev'
 alias ducks='du -cks * | sort -rn | head -11'
 alias top=vtop
 alias talisman=$TALISMAN_HOME/talisman_darwin_amd64
-alias daily-code='f() { echo "$1" >> /Users/matthew/Documents/dev/personal/coding-problems/links.txt; make -C /Users/matthew/Documents/dev/personal/coding-problems };f'
 alias ls='ls -fla'
 alias c='clear'
 alias check-port='f() { echo checking port $1; lsof -i:$1 };f'
