@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+set -eu
+
+readonly vcs_uri="git@${GITHUB_HOST:-github.com}:"
+readonly script_dir="$(dirname "${0}")/../.."
+readonly -a projects=(
+    worthington10TW/setup
+    worthington10TW/worthington10TW
+    worthington10TW/gpio-build-monitor
+    twlabs/projector-backend
+    twlabs/projector-frontend
+    twlabs/pdb-balance-tracker-be
+)
+
+function fetch() {
+  local -r project="${1}"
+
+  if project_exists "${project}"
+  then
+    echo -e "\nUpdating ${project}:" 1>&2
+    git -C "${script_dir}/${project}" pull --rebase --autostash
+  else
+    echo 1>&2
+    git -C "${script_dir}" clone "${vcs_uri}/${project}"
+  fi
+}
+
+function project_exists() {
+  [[ -d "${script_dir}/${1}" ]]
+}
+
+function main() {
+  echo 'Fetching projects...' 1>&2
+  for project in "${projects[@]}"
+  do
+    fetch "${project}"
+  done
+}
+
+main "$@"

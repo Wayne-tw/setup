@@ -36,8 +36,9 @@ cask "mono-mdk"
 # Java
 brew "jenv"
 brew "openjdk@8"
-brew "openjdk@17"
 brew "openjdk@11"
+brew "openjdk@17"
+brew "openjdk@20"
 brew "gradle"
 brew "maven"
 
