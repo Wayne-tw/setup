@@ -38,7 +38,7 @@ brew "jenv"
 brew "openjdk@8"
 brew "openjdk@11"
 brew "openjdk@17"
-brew "openjdk@20"
+brew "openjdk@21"
 brew "gradle"
 brew "maven"
 
@@ -59,6 +59,10 @@ brew "go"
 # Clojure
 brew "leiningen"
 brew "guile"	
+
+# Scala
+brew "coursier/formulas/coursier"
+brew "scala"
 
 # Docker
 brew "docker-compose"
