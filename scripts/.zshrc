@@ -32,8 +32,8 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
  
 # Code completion
-if [ -f '/Users/matthew/Documents/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matthew/Documents/dev/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/matthew/Documents/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matthew/Documents/dev/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/Documents/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matthew/Documents/dev/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/Documents/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matthew/Documents/dev/google-cloud-sdk/completion.zsh.inc'; fi
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 complete -C /usr/local/bin/terraform terraform
@@ -41,8 +41,8 @@ complete -F __start_kubectl k
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
  
 # Alias
-alias tw='cd /Users/matthew/Documents/dev/tw'
-alias dev='cd /Users/matthew/Documents/dev'
+alias tw='cd ~/Documents/dev/tw'
+alias dev='cd ~/Documents/dev'
 alias ducks='du -cks * | sort -rn | head -11'
 alias top=vtop
 alias talisman=$TALISMAN_HOME/talisman_darwin_amd64
@@ -108,7 +108,7 @@ export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
 export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
  
 # Polygot code scanner
-export PATH="/Users/matthew/Documents/dev/polygot/releases/polyglot-code-scanner-v0.2.1-x86_64-apple-darwin:$PATH"
+export PATH="~/Documents/dev/polygot/releases/polyglot-code-scanner-v0.2.1-x86_64-apple-darwin:$PATH"
 
 # Python
 # Set within /usr/local/bin instead
@@ -129,11 +129,11 @@ complete -o nospace -C /usr/local/Cellar/tfenv/2.2.2/versions/1.0.11/terraform t
 export PATH="/usr/local/sbin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/matthew/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matthew/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matthew/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/matthew/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matthew/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matthew/google-cloud-sdk/completion.zsh.inc'; fi
 export GPG_TTY=$(tty)
 
 #Polygot tool
-export PATH=/Users/matthew/Documents/dev/polygot-code-scanner:$PATH
+export PATH=~/Documents/dev/polygot-code-scanner:$PATH
