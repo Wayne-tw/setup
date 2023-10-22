@@ -26,6 +26,8 @@ function fetch() {
 }
 
 function project_exists() {
+  # TODO Split by slash, take ending
+  echo "${script_dir}/${1}"
   [[ -d "${script_dir}/${1}" ]]
 }
 

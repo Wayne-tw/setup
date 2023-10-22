@@ -128,9 +128,6 @@ export LC_CTYPE="en_US.UTF-8"
 complete -o nospace -C /usr/local/Cellar/tfenv/2.2.2/versions/1.0.11/terraform terraform
 export PATH="/usr/local/sbin:$PATH"
 
-# UKSV toolbox
-export PATH=/Users/matthew/Documents/dev/co/toolbox/scripts:$PATH
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/matthew/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matthew/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -140,6 +137,3 @@ export GPG_TTY=$(tty)
 
 #Polygot tool
 export PATH=/Users/matthew/Documents/dev/polygot-code-scanner:$PATH
-
-#Code Maat
-export PATH=~/Documents/dev/co/toolbox/code_analysis/source_code:$PATH
