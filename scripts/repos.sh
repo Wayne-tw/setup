@@ -2,7 +2,7 @@
 set -eu
 
 readonly vcs_uri="git@${GITHUB_HOST:-github.com}:"
-readonly script_dir="$(dirname "${0}")/../.."
+readonly script_dir="$(dirname "${0}")/../../.."
 readonly -a projects=(
     worthington10TW/setup
     worthington10TW/worthington10TW
