@@ -14,19 +14,19 @@ readonly -a projects=(
 
 function fetch() {
   local -r project="${1}"
-
   if project_exists "${project}"
   then
     echo -e "\nUpdating ${project}:" 1>&2
     git -C "${script_dir}/${project}" pull --rebase --autostash
   else
     echo 1>&2
-    git -C "${script_dir}" clone "${vcs_uri}/${project}"
+    local -r group=$(dirname $project)
+    mkdir -p "${script_dir}/${group}"
+    git -C "${script_dir}/${group}" clone "${vcs_uri}/${project}"
   fi
 }
 
 function project_exists() {
-  # TODO Split by slash, take ending
   echo "${script_dir}/${1}"
   [[ -d "${script_dir}/${1}" ]]
 }
