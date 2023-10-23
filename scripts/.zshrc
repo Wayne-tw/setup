@@ -67,6 +67,10 @@ alias please="make"
 
 alias gitme="git config user.email"
 
+alias software="software.sh"
+alias repos="repos.sh"
+alias pairing="pairing.sh"
+
 # Python
 export PATH="$HOME/Library/Python/3.10/bin:$PATH"
 

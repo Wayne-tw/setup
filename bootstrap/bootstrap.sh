@@ -27,6 +27,6 @@ echo 🎉🎉🎉YAAAAS! Lets get coding 🎉🎉🎉
 echo "Run the following command to add repo script and pairing script to your path."
 echo "Then reset your terminal session to access the scripts"
 echo ""
-echo "echo \"export PATH=$(pwd)/../scripts:\$PATH\" >> ~/.zshrc"
+echo "echo 'export PATH=$(pwd)/../scripts:\$PATH' >> ~/.zshrc"
 echo ""
 
