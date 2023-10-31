@@ -1,8 +1,4 @@
-# Setup scripts
-
-This repo will hold setup scripts for new projects
-
-## GCP with Github Action
+# GCP with Github Action
 
 Scripts to:
 
