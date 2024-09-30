@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 tap "aws/tap"
 tap "heroku/brew"
+tap "homebrew/cask-versions"
 
 brew "zsh"
 brew "zsh-completions"
@@ -42,6 +43,7 @@ brew "openjdk@17"
 brew "openjdk@21"
 brew "gradle"
 brew "maven"
+cask "temurin17"
 
 # Node
 brew "nodenv"
@@ -49,6 +51,9 @@ brew "node@14"
 brew "node@16"
 brew "yarn"
 brew "mockserver"
+
+# FE Frameworks
+brew "angular-cli"
 
 # Python
 brew "python"
@@ -72,7 +77,6 @@ brew "podman"
 brew "lima"
 
 # Terraform
-brew "terraform"
 brew "terraform-docs"
 brew "tfenv"
 	
@@ -96,6 +100,8 @@ brew "minikube"
 brew "helm"	
 
 # Tools
+brew "pandoc"
+brew "asciidoc pandoc"
 brew "jq"
 brew "yq"
 brew "shellcheck"
@@ -104,6 +110,8 @@ brew "graphviz"
 brew "watch"
 brew "adr-tools"
 brew "plantuml"
+brew "d2"
+cask "processing"
 
 # AWS
 brew "awscli"
@@ -132,5 +140,5 @@ cask "raspberry-pi-imager"
 cask "dbeaver-community"
 cask "signal"
 cask "insomnia"
+cask "intellij-idea-ce"
 # cask "visual-studio-code"
-# cask "intellij-idea-ce"

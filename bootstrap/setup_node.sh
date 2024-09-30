@@ -6,7 +6,7 @@ cd "$(dirname "$0")/"
 
 nodenv --version
 
-NODENV_VERSION=18.9.1
+NODENV_VERSION=20.5.0
 
 
 if [ "$(nodenv global)" = $NODENV_VERSION ]; then
@@ -14,6 +14,9 @@ if [ "$(nodenv global)" = $NODENV_VERSION ]; then
 else
     nodenv install $NODENV_VERSION && nodenv global $NODENV_VERSION
 fi
+
+echo "Installing NX"
+npm install -g nx
 
 echo ""
 echo ""

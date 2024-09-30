@@ -10,6 +10,9 @@ readonly -a projects=(
     twlabs/projector-backend
     twlabs/projector-frontend
     twlabs/pdb-balance-tracker-be
+    adamtornhill/code-maat
+    adamtornhill/MetricsTreeMap
+    adamtornhill/FractalFigures
 )
 
 function fetch() {

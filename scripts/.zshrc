@@ -32,8 +32,8 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
  
 # Code completion
-if [ -f '~/Documents/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matthew/Documents/dev/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '~/Documents/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matthew/Documents/dev/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/Documents/dev/google-cloud-sdk/path.zsh.inc' ]; then . '~/Documents/dev/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/Documents/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '~/Documents/dev/google-cloud-sdk/completion.zsh.inc'; fi
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 complete -C /usr/local/bin/terraform terraform
@@ -116,7 +116,7 @@ export PATH="~/Documents/dev/polygot/releases/polyglot-code-scanner-v0.2.1-x86_6
 
 # Python
 # Set within /usr/local/bin instead
-# export PATH="/Users/matthew/Library/Python/3.9/bin:$PATH"
+# export PATH="~/Library/Python/3.9/bin:$PATH"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
@@ -133,10 +133,10 @@ complete -o nospace -C /usr/local/Cellar/tfenv/2.2.2/versions/1.0.11/terraform t
 export PATH="/usr/local/sbin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/matthew/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/matthew/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
 export GPG_TTY=$(tty)
 
 #Polygot tool

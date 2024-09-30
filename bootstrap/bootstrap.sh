@@ -21,6 +21,9 @@ if [ -f "Brewfile" ] && [ "$(uname -s)" = "Darwin" ]; then
   echo 💿 You\'re all set 💿
 fi
 
+. ./setup_node.sh
+. ./setup_jenv.sh
+
 echo ""
 echo ""
 echo 🎉🎉🎉YAAAAS! Lets get coding 🎉🎉🎉
