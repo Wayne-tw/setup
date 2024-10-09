@@ -7,12 +7,17 @@ readonly -a projects=(
     worthington10TW/setup
     worthington10TW/worthington10TW
     worthington10TW/gpio-build-monitor
-    twlabs/projector-backend
-    twlabs/projector-frontend
-    twlabs/pdb-balance-tracker-be
+    
+    # twlabs/projector-backend
+    # twlabs/projector-frontend
+
     adamtornhill/code-maat
     adamtornhill/MetricsTreeMap
     adamtornhill/FractalFigures
+
+    kornysietsma/polyglot-code-explorer
+    kornysietsma/polyglot-code-scanner
+    kornysietsma/polyglot-code-offline-layout
 )
 
 function fetch() {
