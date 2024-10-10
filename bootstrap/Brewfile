@@ -1,9 +1,6 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "aws/tap"
 tap "heroku/brew"
-tap "homebrew/cask-versions"
 
 brew "zsh"
 brew "zsh-completions"
@@ -51,6 +48,7 @@ brew "node@14"
 brew "node@16"
 brew "yarn"
 brew "mockserver"
+brew "gulp-cli"
 
 # FE Frameworks
 brew "angular-cli"
@@ -89,6 +87,7 @@ brew "sqlite"
 # Ruby
 brew "rbenv"
 brew "ruby-install"
+brew "rust"
 
 # Kubernetes
 brew "kubernetes-cli"

@@ -18,6 +18,8 @@ readonly -a projects=(
     kornysietsma/polyglot-code-explorer
     kornysietsma/polyglot-code-scanner
     kornysietsma/polyglot-code-offline-layout
+
+    smontanari/code-forensics
 )
 
 function fetch() {
