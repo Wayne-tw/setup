@@ -8,7 +8,7 @@ brew "zsh-completions"
 # Networking
 brew "putty"
 brew "curl"
-brew "openssl@1.1"
+brew "openssl@3"
 cask "ssh-tunnel-manager"
 cask "tunnelblick"
 cask "okta-advanced-server-access"
@@ -30,7 +30,7 @@ brew "pre-commit"
 # dotnet
 brew "dotnet"
 # cask "dotnet-sdk"
-cask "mono-mdk"
+# cask "mono-mdk"
 
 # Java
 brew "jenv"
@@ -69,8 +69,9 @@ brew "coursier/formulas/coursier"
 brew "scala"
 
 # Docker
-brew "docker-compose"
-brew "colima"
+brew "docker"
+# brew "docker-compose"
+# brew "colima"
 brew "podman"
 brew "lima"
 
@@ -79,7 +80,7 @@ brew "terraform-docs"
 brew "tfenv"
 	
 # Database
-brew "postgresql"
+brew "postgresql@17"
 brew "mongodb-atlas-cli"
 brew "mysql"
 brew "sqlite"
@@ -99,8 +100,8 @@ brew "minikube"
 brew "helm"	
 
 # Tools
+brew "asciidoc"
 brew "pandoc"
-brew "asciidoc pandoc"
 brew "jq"
 brew "yq"
 brew "shellcheck"
