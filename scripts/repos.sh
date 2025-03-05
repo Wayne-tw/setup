@@ -8,9 +8,6 @@ readonly -a projects=(
     worthington10TW/worthington10TW
     worthington10TW/gpio-build-monitor
     
-    # twlabs/projector-backend
-    # twlabs/projector-frontend
-
     adamtornhill/code-maat
     adamtornhill/MetricsTreeMap
     adamtornhill/FractalFigures
