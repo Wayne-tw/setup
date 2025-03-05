@@ -1,5 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
- 
+
 if [[ ! -f ~/.zpm/zpm.zsh ]]; then
  git clone --recursive https://github.com/zpm-zsh/zpm ~/.zpm
 fi
@@ -16,9 +16,9 @@ ZSH_THEME="fino"
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git autojump)
+plugins=(git autojump jenv)
 source $ZSH/oh-my-zsh.sh
  
 # Preferred editor for local and remote sessions
@@ -32,6 +32,7 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
  
 # Code completion
+ 
 if [ -f '~/Documents/dev/google-cloud-sdk/path.zsh.inc' ]; then . '~/Documents/dev/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '~/Documents/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '~/Documents/dev/google-cloud-sdk/completion.zsh.inc'; fi
 autoload -U +X bashcompinit && bashcompinit
@@ -41,11 +42,15 @@ complete -F __start_kubectl k
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
  
 # Alias
-alias tw='cd ~/Documents/dev/tw'
+alias gitconfig='git config --list --show-origin'
 alias dev='cd ~/Documents/dev'
+alias twlabs='cd ~/Documents/dev/tw/twlabs/'
+alias projector='cd ~/Documents/dev/tw/twlabs/projector'
 alias ducks='du -cks * | sort -rn | head -11'
 alias top=vtop
+# alias talisman=$TALISMAN_HOME/talisman_hook_script
 alias talisman=$TALISMAN_HOME/talisman_darwin_amd64
+alias daily-code='f() { echo "$1" >> ~/Documents/dev/personal/coding-problems/links.txt; make -C ~/Documents/dev/personal/coding-problems };f'
 alias ls='ls -fla'
 alias c='clear'
 alias check-port='f() { echo checking port $1; lsof -i:$1 };f'
@@ -53,7 +58,6 @@ alias kill-port='f() { echo killing process on port $1; {kill -9 $(lsof -ti tcp:
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 
-alias projector=". secrets.sh"
 alias k="kubectl"
 alias kc="kubectx"
 alias mk="minikube"
@@ -141,3 +145,39 @@ export GPG_TTY=$(tty)
 
 #Polygot tool
 export PATH=~/Documents/dev/polygot-code-scanner:$PATH
+
+#Code Maat
+# export PATH=~/Documents/dev/XXX/toolbox/code_analysis/source_code:$PATH
+export PATH=~/Documents/dev/tw/worthington10tw/setup/scripts:$PATH
+
+#Use Colima
+# export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
+#Use Docker desktop
+export PATH="$HOME/.docker/bin":$PATH
+
+if [ $commands[shippr] ];
+then
+  source <(shippr completion zsh)
+fi
+
+# Ascii doc
+export XML_CATALOG_FILES=/usr/local/etc/xml/catalog#compdef hs
+###-begin-hs-completions-###
+#
+# yargs command completion script
+#
+# Installation: ../../../../.nodenv/versions/20.5.0/bin/hs completion >> ~/.zshrc
+#    or ../../../../.nodenv/versions/20.5.0/bin/hs completion >> ~/.zprofile on OSX.
+#
+_hs_yargs_completions()
+{
+  local reply
+  local si=$IFS
+  IFS=$'
+' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" ../../../../.nodenv/versions/20.5.0/bin/hs --get-yargs-completions "${words[@]}"))
+  IFS=$si
+  _describe 'values' reply
+}
+compdef _hs_yargs_completions hs
+###-end-hs-completions-###
+
