@@ -15,6 +15,7 @@ if [ -f "Brewfile" ] && [ "$(uname -s)" = "Darwin" ]; then
   brew update
   
   echo "==> Installing Homebrew dependencies…"
+  brew config
   brew bundle check >/dev/null 2>&1 || brew bundle
 
   echo "==> Cleanup Homebrew dependencies…"
