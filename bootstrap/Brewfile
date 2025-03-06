@@ -113,7 +113,7 @@ brew "adr-tools"
 brew "plantuml"
 brew "d2"
 cask "processing"
-brew "qmk-toolbox"
+cask "qmk-toolbox"
 
 # AWS
 brew "awscli"
