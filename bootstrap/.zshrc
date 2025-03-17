@@ -1,17 +1,17 @@
 export ZSH=$HOME/.oh-my-zsh
 
 if [[ ! -f ~/.zpm/zpm.zsh ]]; then
- git clone --recursive https://github.com/zpm-zsh/zpm ~/.zpm
+  git clone --recursive https://github.com/zpm-zsh/zpm "${XDG_DATA_HOME:-$HOME/.local/share}/zsh/plugins/@zpm"
 fi
-source ~/.zpm/zpm.zsh
+source "${XDG_DATA_HOME:-$HOME/.local/share}/zsh/plugins/@zpm/zpm.zsh"
  
-zpm load zpm-zsh/material-colors
+zpm load zpm-zsh/dircolors-neutral
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="fino"
+ZSH_THEME="robbyrussell"
  
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -44,6 +44,7 @@ complete -F __start_kubectl k
 # Alias
 alias gitconfig='git config --list --show-origin'
 alias dev='cd ~/Documents/dev'
+alias mzw='cd ~/Documents/dev/mzworthington'
 alias twlabs='cd ~/Documents/dev/tw/twlabs/'
 alias projector='cd ~/Documents/dev/tw/twlabs/projector'
 alias ducks='du -cks * | sort -rn | head -11'
@@ -57,6 +58,7 @@ alias check-port='f() { echo checking port $1; lsof -i:$1 };f'
 alias kill-port='f() { echo killing process on port $1; {kill -9 $(lsof -ti tcp:$1) && echo done} || echo no process running };f'
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
+alias software="software.sh"
 
 alias k="kubectl"
 alias kc="kubectx"
@@ -129,7 +131,7 @@ export LC_CTYPE="en_US.UTF-8"
 # eval $(minikube docker-env)
 # minikube -p minikube docker-env
 
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # GCP
 # Terraform
@@ -148,17 +150,11 @@ export PATH=~/Documents/dev/polygot-code-scanner:$PATH
 
 #Code Maat
 # export PATH=~/Documents/dev/XXX/toolbox/code_analysis/source_code:$PATH
-export PATH=~/Documents/dev/tw/worthington10tw/setup/scripts:$PATH
 
 #Use Colima
 # export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
 #Use Docker desktop
 export PATH="$HOME/.docker/bin":$PATH
-
-if [ $commands[shippr] ];
-then
-  source <(shippr completion zsh)
-fi
 
 # Ascii doc
 export XML_CATALOG_FILES=/usr/local/etc/xml/catalog#compdef hs
@@ -181,3 +177,4 @@ _hs_yargs_completions()
 compdef _hs_yargs_completions hs
 ###-end-hs-completions-###
 
+export PATH=~/Documents/dev/mzworthington/setup/bootstrap/../scripts:$PATH

@@ -2,8 +2,12 @@ tap "homebrew/bundle"
 tap "aws/tap"
 tap "heroku/brew"
 
+cask "iterm2"
+brew "autojump"
 brew "zsh"
 brew "zsh-completions"
+brew "gsettings-desktop-schemas"
+brew "libavif"
 
 # Networking
 brew "putty"
@@ -20,7 +24,6 @@ brew "wget"
 # Build
 brew "cmake"
 brew "ansible"
-brew "packer"
 
 # Git
 brew "git"
@@ -34,17 +37,15 @@ brew "dotnet"
 
 # Java
 brew "jenv"
-brew "openjdk@8"
+# brew "openjdk@8"
 brew "openjdk@11"
 brew "openjdk@17"
 brew "openjdk@21"
 brew "gradle"
 brew "maven"
-cask "temurin17"
 
 # Node
 brew "nodenv"
-brew "node@14"
 brew "node@20"
 brew "node@22"
 brew "yarn"
@@ -66,15 +67,15 @@ brew "leiningen"
 brew "guile"	
 
 # Scala
-brew "coursier/formulas/coursier"
+brew "coursier"
 brew "scala"
 
 # Docker
-brew "docker"
+# brew "docker"
 # brew "docker-compose"
 # brew "colima"
-brew "podman"
-brew "lima"
+# brew "podman"
+# brew "lima"
 
 # Terraform
 brew "terraform-docs"
@@ -112,8 +113,8 @@ brew "watch"
 brew "adr-tools"
 brew "plantuml"
 brew "d2"
-cask "processing"
-cask "qmk-toolbox"
+# cask "processing"
+# cask "qmk-toolbox"
 
 # AWS
 brew "awscli"
@@ -130,18 +131,18 @@ brew "heroku"
 brew "circleci"	
 
 # Applications
-cask "slack"
-# cask "spotify"
+cask "spotify"
 cask "bitwarden"
-cask "microsoft-office"
-cask "microsoft-teams"
 cask "firefox"
-cask "whatsapp"
 cask "zoom"
 cask "raspberry-pi-imager"
 cask "dbeaver-community"
 cask "signal"
 cask "insomnia"
 cask "intellij-idea-ce"
-# cask "visual-studio-code"
+cask "visual-studio-code"
 cask "karabiner-elements"
+# cask "whatsapp"
+# cask "slack"
+# cask "microsoft-office"
+# cask "microsoft-teams"

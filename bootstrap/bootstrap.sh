@@ -23,12 +23,19 @@ if [ -f "Brewfile" ] && [ "$(uname -s)" = "Darwin" ]; then
   
   echo ""
   echo ""
-  echo 💿 You\'re all set 💿
+  echo 🎉🎉🎉  Software up to date 🎉🎉🎉 
 fi
 
-. ./setup_git.sh
-. ./setup_node.sh
-. ./setup_jenv.sh
+if [ -d $HOME/.oh-my-zsh/ ]; then
+  echo "🎉🎉🎉 oh-my-zsh already installed 🎉🎉🎉"
+else
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+. ./setup_git.sh || echo "Failed to setup git"
+. ./setup_node.sh || echo "Failed to setup node"
+# . ./setup_jenv.sh || echo "Failed to setup java"
+
 
 existing_config="/Users/matthew/.zshrc"
 if [ -f "$existing_config" ]; then
@@ -39,15 +46,6 @@ if [ -f "$existing_config" ]; then
 fi
 
 touch ~/.variables
-cp .zshrc ~/.zshrc
-echo "Copied zshrc from .zshrc to ~/.zshrc"
-
-echo ""
-echo ""
-echo 🎉🎉🎉YAAAAS! Lets get coding 🎉🎉🎉
-echo "Run the following command to add repo script and pairing script to your path."
-echo "Then reset your terminal session to access the scripts"
-echo ""
-echo "echo 'export PATH=$(pwd)/../scripts:\$PATH' >> ~/.zshrc"
-echo ""
+cp .zshrc ~/.zshrc && echo "🎉🎉🎉 Copied zshrc from .zshrc to ~/.zshrc 🎉🎉🎉"
+echo 🎉🎉🎉 YAAAAS! Lets get coding 🎉🎉🎉
 

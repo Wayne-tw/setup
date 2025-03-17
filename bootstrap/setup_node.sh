@@ -4,22 +4,15 @@ set -e
 
 cd "$(dirname "$0")/"
 
-nodenv --version
+nodenv --version >/dev/null 2>&1
 
 NODENV_VERSION=20.5.0
 
 
-if [ "$(nodenv global)" = $NODENV_VERSION ]; then
-  echo 🎉🎉🎉 Node $NODENV_VERSION already installed 🎉🎉🎉
-else
-    nodenv install $NODENV_VERSION && nodenv global $NODENV_VERSION
+if [ "$(nodenv global)" != $NODENV_VERSION ]; then
+   nodenv install $NODENV_VERSION && nodenv global $NODENV_VERSION
 fi
 
-echo "Installing NX"
-npm install -g nx
+nx --version >/dev/null 2>&1 || (echo "Installing NX" && npm install -g nx)
 
-echo ""
-echo ""
-echo 🎉🎉🎉YAAAAS! Lets get coding 🎉🎉🎉
-echo ""
-echo ""
+echo 🎉🎉🎉 Node ${NODENV_VERSION} setup 🎉🎉🎉
