@@ -36,16 +36,17 @@ fi
 . ./setup_node.sh || echo "Failed to setup node"
 # . ./setup_jenv.sh || echo "Failed to setup java"
 
-
-existing_config="/Users/matthew/.zshrc"
-if [ -f "$existing_config" ]; then
-  date_suffix=$(date +%Y-%m-%d)
-  existing_config_backup="${existing_config}.${date_suffix}"
-  mv "$existing_config" "$existing_config_backup"
-  echo "File '$existing_config' renamed to '$existing_config_backup'"
+if [ -L ~/.zshrc ]; then
+  echo "🎉🎉🎉 Symlink from .zshrc to ~/.zshrc previously created 🎉🎉🎉"
+else
+  if [ -f ~/.zshrc ]; then
+    date_suffix=$(date +%Y-%m-%d)
+    existing_config_backup="~/.zshrc.${date_suffix}"
+    mv ~/.zshrc "$existing_config_backup"
+    echo "File ~/.zshrc' backed up to '$existing_config_backup'"
+  fi
+  ln -s $(pwd)/.zshrc $HOME/.zshrc && echo "🎉🎉🎉 Symlink created from .zshrc to ~/.zshrc 🎉🎉🎉"
+  touch ~/.variables
 fi
 
-touch ~/.variables
-cp .zshrc ~/.zshrc && echo "🎉🎉🎉 Copied zshrc from .zshrc to ~/.zshrc 🎉🎉🎉"
 echo 🎉🎉🎉 YAAAAS! Lets get coding 🎉🎉🎉
-

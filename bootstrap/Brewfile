@@ -90,6 +90,9 @@ brew "sqlite"
 # Ruby
 brew "rbenv"
 brew "ruby-install"
+brew "ruby-build"
+
+# Rust
 brew "rust"
 
 # Kubernetes
@@ -142,6 +145,7 @@ cask "insomnia"
 cask "intellij-idea-ce"
 cask "visual-studio-code"
 cask "karabiner-elements"
+cask "notion"
 # cask "whatsapp"
 # cask "slack"
 # cask "microsoft-office"
