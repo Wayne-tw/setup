@@ -4,9 +4,9 @@ set -eu
 readonly vcs_uri="git@${GITHUB_HOST:-github.com}:"
 readonly script_dir="$(dirname "${0}")/../../.."
 readonly -a projects=(
-    worthington10TW/setup
-    worthington10TW/worthington10TW
-    worthington10TW/gpio-build-monitor
+    mzworthington/setup
+    mzworthington/mzworthington
+    mzworthington/gpio-build-monitor
     
     adamtornhill/code-maat
     adamtornhill/MetricsTreeMap
