@@ -2,10 +2,14 @@ export ZSH=$HOME/.oh-my-zsh
 
 if [[ ! -f ~/.zpm/zpm.zsh ]]; then
   git clone --recursive https://github.com/zpm-zsh/zpm "${XDG_DATA_HOME:-$HOME/.local/share}/zsh/plugins/@zpm"
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 fi
+
 source "${XDG_DATA_HOME:-$HOME/.local/share}/zsh/plugins/@zpm/zpm.zsh"
  
-zpm load zpm-zsh/dircolors-neutral
+zpm load zpm-zsh/material-colours
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -18,7 +22,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git git-auto-fetch autojump jenv azure autoenv aliases brew k9s kubectl urltools)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch autojump jenv azure autoenv aliases brew k9s kubectl urltools)
 source $ZSH/oh-my-zsh.sh
  
 # Preferred editor for local and remote sessions

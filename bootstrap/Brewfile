@@ -110,7 +110,7 @@ brew "helm"
 brew "jq"
 brew "yq"
 brew "shellcheck"
-brew "parallel"
+# brew "parallel"
 brew "watch"
 
 # Documentation
