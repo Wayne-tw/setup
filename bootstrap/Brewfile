@@ -123,6 +123,7 @@ brew "adr-tools"
 brew "graphviz"
 brew "plantuml"
 brew "d2"
+brew "librsvg"
 
 # Hardware
 # cask "qmk-toolbox"

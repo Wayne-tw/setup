@@ -51,7 +51,7 @@
         rebase = true
     
 # Dir specifics 
-[includeIf "gitdir:~/Documents/dev/mzworthington/"]
-	path = "~/Documents/dev/mzworthington/.gitconfig"
-[includeIf "gitdir:~/Documents/dev/betway/"]
-	path = "~/Documents/dev/betway/.gitconfig"
+[includeIf "gitdir:~/Documents/dev/personal/"]
+	path = "~/Documents/dev/personal/.gitconfig"
+[includeIf "gitdir:~/Documents/dev/bw/"]
+	path = "~/Documents/dev/bw/.gitconfig"

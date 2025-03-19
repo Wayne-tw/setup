@@ -47,10 +47,19 @@ complete -F __start_kubectl k
  
 # Alias
 alias gitconfig='git config --list --show-origin'
+alias gitme="git config user.email"
+
+alias software="software.sh"
+alias repos="repos.sh"
+alias pairing="pairing.sh"
+
 alias dev='cd ~/Documents/dev'
-alias mzw='cd ~/Documents/dev/mzworthington'
-alias twlabs='cd ~/Documents/dev/tw/twlabs/'
-alias projector='cd ~/Documents/dev/tw/twlabs/projector'
+alias mzw='cd ~/Documents/dev/personal/mzworthington'
+alias bw='cd ~/Documents/dev/bw'
+
+alias setup="code ~/Documents/dev/personal/mzworthington/setup/bootstrap/"
+alias ohmyzsh="code ~/.oh-my-zsh"
+
 alias ducks='du -cks * | sort -rn | head -11'
 alias top=vtop
 # alias talisman=$TALISMAN_HOME/talisman_hook_script
@@ -60,29 +69,15 @@ alias ls='ls -fla'
 alias c='clear'
 alias check-port='f() { echo checking port $1; lsof -i:$1 };f'
 alias kill-port='f() { echo killing process on port $1; {kill -9 $(lsof -ti tcp:$1) && echo done} || echo no process running };f'
-alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="code ~/.oh-my-zsh"
-alias software="software.sh"
 
-alias k="kubectl"
-alias kc="kubectx"
-alias mk="minikube"
- 
+alias please="make"
+
+# Python
+export PATH="$HOME/Library/Python/3.10/bin:$PATH"
 alias py="python3"
 alias pyp="pip3"
 alias python="python3"
 alias pip="pip3"
-
-alias please="make"
-
-alias gitme="git config user.email"
-
-alias software="software.sh"
-alias repos="repos.sh"
-alias pairing="pairing.sh"
-
-# Python
-export PATH="$HOME/Library/Python/3.10/bin:$PATH"
 
 # Java
 export PATH="$HOME/.jenv/bin:$PATH"
@@ -181,4 +176,4 @@ _hs_yargs_completions()
 compdef _hs_yargs_completions hs
 ###-end-hs-completions-###
 
-export PATH=~/Documents/dev/mzworthington/setup/bootstrap/../scripts:$PATH
+export PATH=~/Documents/dev/personal/mzworthington/setup/bootstrap/../scripts:$PATH
