@@ -46,7 +46,6 @@ else
     echo "File ~/.zshrc' backed up to '$existing_config_backup'"
   fi
   ln -s $(pwd)/.zshrc $HOME/.zshrc && echo "🎉🎉🎉 Symlink created from .zshrc to ~/.zshrc 🎉🎉🎉"
-  touch ~/.variables
 fi
 
 echo 🎉🎉🎉 YAAAAS! Lets get coding 🎉🎉🎉

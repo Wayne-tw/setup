@@ -18,7 +18,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git autojump jenv)
+plugins=(git git-auto-fetch autojump jenv azure autoenv aliases brew k9s kubectl urltools)
 source $ZSH/oh-my-zsh.sh
  
 # Preferred editor for local and remote sessions

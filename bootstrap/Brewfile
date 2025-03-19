@@ -29,6 +29,7 @@ brew "ansible"
 brew "git"
 brew "git-secrets"
 brew "pre-commit"
+# cask "github"
 
 # dotnet
 brew "dotnet"
@@ -58,6 +59,7 @@ brew "angular-cli"
 # Python
 brew "python"
 brew "virtualenv"
+brew "autoenv"
 
 # Go
 brew "go"
@@ -104,19 +106,25 @@ brew "k9s"
 brew "minikube"
 brew "helm"	
 
-# Tools
-brew "asciidoc"
-brew "pandoc"
+# Shell tools
 brew "jq"
 brew "yq"
 brew "shellcheck"
 brew "parallel"
-brew "graphviz"
 brew "watch"
+
+# Documentation
+brew "asciidoc"
+brew "pandoc"
 brew "adr-tools"
+
+# Drawing
+# cask "processing"
+brew "graphviz"
 brew "plantuml"
 brew "d2"
-# cask "processing"
+
+# Hardware
 # cask "qmk-toolbox"
 
 # AWS
